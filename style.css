@@ -1,0 +1,90 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden; /* Prevent scrollbar due to negative margins */
+}
+
+.therapy {
+	background: #A8E287;
+	color: #fff;
+	position: relative;
+	text-align: center;
+	width: 100vw; /* Expand background to cover the whole screen */
+	height: 100vh; /* Expand background to cover the whole screen */
+	margin: -100px; /* Extend the background beyond the viewport */
+	padding: 20px;
+}
+
+nav {
+	margin-bottom: 20px;
+}
+
+nav .fwends-img {
+	width: 100px; /* Adjusted size for MacBook Pro screen */
+	cursor: pointer;
+}
+
+nav .logo-img {
+	width: 400px; /* Adjusted size for MacBook Pro screen */
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+
+button {
+	background: #efefef;
+	height: 60px; /* Adjusted height for MacBook Pro screen */
+	width: 120px; /* Adjusted width for MacBook Pro screen */
+	border-radius: 50px; /* Adjusted border-radius for MacBook Pro screen */
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+.therapeuticfriends {
+	display: flex;
+	flex-direction: column; /* Changed to column layout */
+	align-items: center; /* Center align items horizontally */
+	margin-bottom: 20px; /* Added margin for spacing on MacBook Pro screen */
+}
+
+.fwends {
+	width: 200px; /* Adjusted size for MacBook Pro screen */
+	margin-bottom: 10px; /* Added margin to create spacing between fwends and thought */
+}
+
+.thought {
+	width: 250px; /* Adjusted size for MacBook Pro screen */
+	display: none;
+}
+
+/* New styles for the thought bubble text container */
+.thought-container {
+	position: relative;
+	display: inline-block;
+	/* padding: 20px; /* Added padding to create spacing around thought text */
+	background-color: transparent;
+	border-radius: 10px;
+	height: 50px; /* Adjusted height for larger thought bubble */
+}
+
+#thoughtText {
+	position: absolute;
+	top: 240%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: black;
+	text-align: center;
+	width: 100%; /* Set width to 100% to wrap text within thought bubble */
+	display: none;
+}
+

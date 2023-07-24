@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Therapy friends!</title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+		function toggleText() {
+			var texts = [
+				"Allow others to be who they are.",
+				"Allow yourself to be who you are.",
+				"Uncertainty is Reality.",
+				"Don't FORCE situations.",
+				"Solutions will Emerge.",
+				"Love them the way they need to be love.",
+				"Love is selfless.",
+				"Feelings are visitors; let them come and go.",
+				"Young and in love",
+				"Do you want me or do you not?"
+				]; // Array of texts
+			var randomIndex = Math.floor(Math.random() * texts.length); // Get random index
+			var selectedText = texts[randomIndex]; // Get the selected text
+
+			var thought = document.getElementById("thought");
+			var thoughtText = document.getElementById("thoughtText");
+			var therapyBtn = document.getElementById("therapyBtn");
+			var fwendsImg = document.getElementById("fwendsImg");
+
+			if (thought.style.display === "none") {
+				thoughtText.textContent = selectedText;
+				thought.style.display = "block";
+				thoughtText.style.display = "block";
+				therapyBtn.textContent = "Shut Up";
+				fwendsImg.style.display = "block";
+			} else {
+				thought.style.display = "none";
+				thoughtText.style.display = "none";
+				therapyBtn.textContent = "Free Therapy!";
+				fwendsImg.style.display = "none";
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="therapy">
+		<nav>
+			<div class="centered-content">
+				<img src="images/logo.png" class="logo-img">
+				<button onclick="toggleText()" id="therapyBtn">Free Therapy!</button>
+			</div>
+		</nav>
+
+		<div class="therapeuticfriends">
+			<!-- Thought bubble container -->
+			<div class="thought-container">
+				<img src="images/thought.png" id="thought" class="thought" style="display: none;">
+				<img src="images/fwends.png" id="fwendsImg" class="fwends" style="display: none;">
+				<!-- Text inside the thought bubble -->
+				<div id="thoughtText"></div>
+			</div>
+		</div>
+
+		<div id="textField" style="display: none;">
+			Allow others to be who they are.<br>
+			Allow yourself to be who you are.<br>
+			Uncertainty is Reality.<br>
+			Don't FORCE situations.<br>
+			Solutions will Emerge.<br>
+			Love them the way they need to be love.<br>
+			Love is selfless.<br>
+			Feelings are visitors; let them come and go.<br>
+			Young and in love<br>
+			Do you want me or do you not?
+		</div>
+	</div>
+</body>
+</html>
+
+
